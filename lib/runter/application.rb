@@ -3,11 +3,12 @@ module Runter
 
   class Application
      def initialize
-       @name = "runter"
+       @name      = "runter"
+       @runtFile  = Runter::Runtfile.new
      end
 
      def run
-       puts "HI!"
+       puts "Runter started..."
      end
   end
  
