@@ -2,10 +2,10 @@
 module Runter
   class Watcher
     def initialize(json) 
-    	@files 					= []
-    	@name 					= json["name"]
-      @singleActions 	= json["singleFileActions"]
-      @bulkActions 		= json["bulkdActions"]
+      @files         = []
+      @name          = json["name"]
+      @singleActions = json["singleFileActions"]
+      @bulkActions   = json["bulkdActions"]
       load_files(json["src"])
     end
     def load_files(paths)
@@ -16,10 +16,11 @@ module Runter
   end
 
   class Runtfile
-  	def initialize()
-  		@watchers = []
-  		load_settings()
-  	end
+    def initialize()
+      @watchers = []
+      load_settings()
+    end
+
     def load_settings()
       if !File.file?('Runtfile')
         raise 'You must created a Runtfile before running runter!'
