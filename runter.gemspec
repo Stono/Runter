@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email         = ["karlstoney@googlemail.com"]
   s.homepage      = "http://www.jambr.co.uk/"
   s.files         = `git ls-files -z`.split("\x0")
-
+  s.add_runtime_dependency "filewatcher"
   s.executables   = %w(runter)
   s.require_paths = ["lib"]
 end
