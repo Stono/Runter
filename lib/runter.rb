@@ -5,6 +5,7 @@ end
 require 'filewatcher'
 require 'json'
 
+require 'runter/shell'
 require 'runter/watcher'
 require 'runter/runtfile'
 require 'runter/application'

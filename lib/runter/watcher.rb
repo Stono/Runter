@@ -19,7 +19,6 @@ module Runter
       return @files
     end
     def handle_change(file) 
-      puts file
       if(@files.include?(file))
         perform_single_actions(file)
         perform_bulk_actions(file)
@@ -35,7 +34,7 @@ module Runter
       return if @bulkActions == nil
       @bulkActions.each{|action| 
         action.gsub! "$1", file
-        puts action
+        Runter::Shell.execute(action)
       }
     end
   end

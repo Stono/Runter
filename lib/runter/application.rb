@@ -18,7 +18,6 @@ module Runter
        @runtFile.get_watchers().each{|watcher| 
          filesToWatch.push(*watcher.get_watch_files())
        }
-       puts filesToWatch
        FileWatcher.new(filesToWatch).watch() do |filename, event|
          handle_change(filename)  
        end 
