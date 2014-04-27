@@ -6,12 +6,16 @@ module Runter
       @name          = json["name"]
       @singleActions = json["singleFileActions"]
       @bulkActions   = json["bulkdActions"]
-      load_files(json["src"])
+      @watchDirs     = json["src"]
+      load_files()
     end
-    def load_files(paths)
-      paths.each{|path|
+    def load_files()
+      @watchDirs.each{|path|
         @files << Dir[path]
       }
+    end
+    def get_watch_dirs() 
+      return @watchDirs
     end
   end
 
