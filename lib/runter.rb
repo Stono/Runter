@@ -6,3 +6,4 @@ require 'filewatcher'
 require 'json'
 
 require 'runter/runtfile'
+require 'runter/application'
