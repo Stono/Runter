@@ -1,6 +1,7 @@
 ## IMPORTANT
-This project has only just started, and in no way works...
-Go look elsewhere for the time being :)
+This project is in early, early stages.
+Don't expect anything reliable just yet.
+Even though the instructions state it, it isn't currently uploaded to Rubygems and won't be until I'm happy with it.
 
 ## Runter
 Runter is a task runner for Ruby.
