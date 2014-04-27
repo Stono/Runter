@@ -2,7 +2,7 @@
   "watchers":[ 
     {
       "name": "libwatch",
-      "src": ["lib/**/*.rb"],
+      "src": ["lib/"],
       "singleFileActions": [
         "echo $1 was modified"
       ],
