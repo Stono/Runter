@@ -1,4 +1,4 @@
-# Handles the read and write of the runt file
+# Handles versioning of the application
 module Runter
   VERSION = "0.1.0"
 end

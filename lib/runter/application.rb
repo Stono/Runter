@@ -14,13 +14,20 @@ module Runter
      end
 
      def start_watch() 
-       dirsToWatch = []
+       filesToWatch = []
        @runtFile.get_watchers().each{|watcher| 
-         dirsToWatch.push(*watcher.get_watch_dirs())   
+         filesToWatch.push(*watcher.get_watch_files())
        }
-       FileWatcher.new(dirsToWatch).watch() do |filename, event|
-         puts "Detected change: #{filename}"  
+       puts filesToWatch
+       FileWatcher.new(filesToWatch).watch() do |filename, event|
+         handle_change(filename)  
        end 
+     end
+
+     def handle_change(file)
+       @runtFile.get_watchers().each{|watcher|
+         watcher.handle_change(file)
+       }
      end
   end
  

@@ -2,12 +2,12 @@
   "watchers":[ 
     {
       "name": "libwatch",
-      "src": ["lib/"],
+      "src": ["lib/**/*"],
       "singleFileActions": [
-        "echo $1 was modified"
+        "echo '$1 was modified'"
       ],
       "bulkActions": [
-        "echo Runter detected some changes"
+        "echo 'Runter detected some changes'"
       ]
     }
   ]
