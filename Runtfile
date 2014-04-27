@@ -1,0 +1,14 @@
+{
+  "watchers":[ 
+    {
+      "name": "libwatch",
+      "src": ["lib/**/*.rb"],
+      "singleFileActions": [
+        "echo $1 was modified"
+      ],
+      "bulkActions": [
+        "echo Runter detected some changes"
+      ]
+    }
+  ]
+}
