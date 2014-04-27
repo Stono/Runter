@@ -17,7 +17,7 @@ namespace "gem" do
   desc "Installs the gem package"
   task :install do
     puts "Installing gem file..."
-    puts %x[gem install #{Dir["*.gem"].first()}]
+    puts %x[gem install #{Dir["*.gem"].first()} --no-document]
   end
  
   desc "Cleans, Builds and Installs the gem"
